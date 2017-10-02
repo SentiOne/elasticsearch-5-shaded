@@ -58,9 +58,10 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
-                <version>2.3</version>
+                <version>3.1.0</version>
                 <configuration>
                     <createSourcesJar>true</createSourcesJar>
+                    <promoteTransitiveDependencies>true</promoteTransitiveDependencies>
                 </configuration>
                 <executions>
                     <execution>
@@ -69,18 +70,47 @@
                             <goal>shade</goal>
                         </goals>
                         <configuration>
+                            <artifactSet>
+                                <includes>
+                                    <include>org.elasticsearch*:*</include>
+                                    <include>io.netty:*</include>
+                                    <include>org.apache.lucene:*</include>
+                                    <include>com.google.guava:*</include>
+                                    <include>org.apache.logging.log4j:*</include>
+                                </includes>
+                            </artifactSet>
                             <relocations>
                                 <relocation>
                                     <pattern>org.elasticsearch</pattern>
                                     <shadedPattern>${shade.namespace}.org.elasticsearch</shadedPattern>
                                 </relocation>
                                 <relocation>
-                                    <pattern>org.apache</pattern>
-                                    <shadedPattern>${shade.namespace}.org.apache</shadedPattern>
+                                    <pattern>org.apache.commons.logging</pattern>
+                                    <shadedPattern>${shade.namespace}.org.apache.commons.logging</shadedPattern>
+                                </relocation>
+                                <relocation>
+                                    <pattern>org.apache.commons.codec</pattern>
+                                    <shadedPattern>${shade.namespace}.org.apache.commons.codec</shadedPattern>
+                                </relocation>
+                                <relocation>
+                                    <pattern>org.apache.logging.log4j</pattern>
+                                    <shadedPattern>${shade.namespace}.org.apache.logging.log4j</shadedPattern>
+                                </relocation>
+                                <relocation>
+                                    <pattern>org.apache.lucene</pattern>
+                                    <shadedPattern>${shade.namespace}.org.apache.lucene</shadedPattern>
                                 </relocation>
                                 <relocation>
                                     <pattern>io.netty</pattern>
                                     <shadedPattern>${shade.namespace}.io.netty</shadedPattern>
+                                </relocation>
+                                <relocation>
+                                    <pattern>com.google</pattern>
+                                    <shadedPattern>${shade.namespace}.com.google</shadedPattern>
+                                </relocation>
+                                <relocation>
+                                    <pattern>org.jboss.netty</pattern>
+                                    <shadedPattern>${shade.namespace}.org.jboss.netty</shadedPattern>
                                 </relocation>
                             </relocations>
                             <transformers>
@@ -91,8 +121,29 @@
                                     <resource>META-INF/log4j-provider.properties</resource>
                                     <file>shaded-log4j-provider.properties</file>
                                 </transformer>
-                                <transformer implementation="org.apache.maven.plugins.shade.resource.DontIncludeResourceTransformer">
-                                    <resource>META-INF/services/javax.annotation.processing.Processor</resource>
+                                <transformer implementation="org.apache.maven.plugins.shade.resource.IncludeResourceTransformer">
+                                    <resource>META-INF/services/shade5.org.apache.lucene.analysis.util.CharFilterFactory</resource>
+                                    <file>shade5.org.apache.lucene.analysis.util.CharFilterFactory</file>
+                                </transformer>
+                                <transformer implementation="org.apache.maven.plugins.shade.resource.IncludeResourceTransformer">
+                                    <resource>META-INF/services/shade5.org.apache.lucene.analysis.util.TokenFilterFactory</resource>
+                                    <file>shade5.org.apache.lucene.analysis.util.TokenFilterFactory</file>
+                                </transformer>
+                                <transformer implementation="org.apache.maven.plugins.shade.resource.IncludeResourceTransformer">
+                                    <resource>META-INF/services/shade5.org.apache.lucene.analysis.util.TokenizerFactory</resource>
+                                    <file>shade5.org.apache.lucene.analysis.util.TokenizerFactory</file>
+                                </transformer>
+                                <transformer implementation="org.apache.maven.plugins.shade.resource.IncludeResourceTransformer">
+                                    <resource>META-INF/services/shade5.org.apache.lucene.codecs.Codec</resource>
+                                    <file>shade5.org.apache.lucene.codecs.Codec</file>
+                                </transformer>
+                                <transformer implementation="org.apache.maven.plugins.shade.resource.IncludeResourceTransformer">
+                                    <resource>META-INF/services/shade5.org.apache.lucene.codecs.DocValuesFormat</resource>
+                                    <file>shade5.org.apache.lucene.codecs.DocValuesFormat</file>
+                                </transformer>
+                                <transformer implementation="org.apache.maven.plugins.shade.resource.IncludeResourceTransformer">
+                                    <resource>META-INF/services/shade5.org.apache.lucene.codecs.PostingsFormat</resource>
+                                    <file>shade5.org.apache.lucene.codecs.PostingsFormat</file>
                                 </transformer>
                                 <transformer implementation="org.apache.maven.plugins.shade.resource.IncludeResourceTransformer">
                                     <resource>META-INF/services/javax.annotation.processing.Processor</resource>
@@ -113,11 +164,12 @@
                             </transformers>
                             <filters>
                                 <filter>
-                                <artifact>*:*</artifact>
+                                    <artifact>*:*</artifact>
                                     <excludes>
                                         <exclude>META-INF/*.SF</exclude>
                                         <exclude>META-INF/*.DSA</exclude>
                                         <exclude>META-INF/*.RSA</exclude>
+                                        <exclude>META-INF/services/*</exclude>
                                     </excludes>
                                 </filter>
                             </filters>

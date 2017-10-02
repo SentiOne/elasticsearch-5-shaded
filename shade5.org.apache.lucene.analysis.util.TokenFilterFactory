@@ -1,0 +1,108 @@
+#  Licensed to the Apache Software Foundation (ASF) under one or more
+#  contributor license agreements.  See the NOTICE file distributed with
+#  this work for additional information regarding copyright ownership.
+#  The ASF licenses this file to You under the Apache License, Version 2.0
+#  (the "License"); you may not use this file except in compliance with
+#  the License.  You may obtain a copy of the License at
+#
+#       http://www.apache.org/licenses/LICENSE-2.0
+#
+#  Unless required by applicable law or agreed to in writing, software
+#  distributed under the License is distributed on an "AS IS" BASIS,
+#  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+#  See the License for the specific language governing permissions and
+#  limitations under the License.
+
+shade5.org.apache.lucene.analysis.tr.ApostropheFilterFactory
+shade5.org.apache.lucene.analysis.ar.ArabicNormalizationFilterFactory
+shade5.org.apache.lucene.analysis.ar.ArabicStemFilterFactory
+shade5.org.apache.lucene.analysis.bg.BulgarianStemFilterFactory
+shade5.org.apache.lucene.analysis.br.BrazilianStemFilterFactory
+shade5.org.apache.lucene.analysis.cjk.CJKBigramFilterFactory
+shade5.org.apache.lucene.analysis.cjk.CJKWidthFilterFactory
+shade5.org.apache.lucene.analysis.ckb.SoraniNormalizationFilterFactory
+shade5.org.apache.lucene.analysis.ckb.SoraniStemFilterFactory
+shade5.org.apache.lucene.analysis.commongrams.CommonGramsFilterFactory
+shade5.org.apache.lucene.analysis.commongrams.CommonGramsQueryFilterFactory
+shade5.org.apache.lucene.analysis.compound.DictionaryCompoundWordTokenFilterFactory
+shade5.org.apache.lucene.analysis.compound.HyphenationCompoundWordTokenFilterFactory
+shade5.org.apache.lucene.analysis.core.DecimalDigitFilterFactory
+shade5.org.apache.lucene.analysis.core.LowerCaseFilterFactory
+shade5.org.apache.lucene.analysis.core.StopFilterFactory
+shade5.org.apache.lucene.analysis.core.TypeTokenFilterFactory
+shade5.org.apache.lucene.analysis.core.UpperCaseFilterFactory
+shade5.org.apache.lucene.analysis.cz.CzechStemFilterFactory
+shade5.org.apache.lucene.analysis.de.GermanLightStemFilterFactory
+shade5.org.apache.lucene.analysis.de.GermanMinimalStemFilterFactory
+shade5.org.apache.lucene.analysis.de.GermanNormalizationFilterFactory
+shade5.org.apache.lucene.analysis.de.GermanStemFilterFactory
+shade5.org.apache.lucene.analysis.el.GreekLowerCaseFilterFactory
+shade5.org.apache.lucene.analysis.el.GreekStemFilterFactory
+shade5.org.apache.lucene.analysis.en.EnglishMinimalStemFilterFactory
+shade5.org.apache.lucene.analysis.en.EnglishPossessiveFilterFactory
+shade5.org.apache.lucene.analysis.en.KStemFilterFactory
+shade5.org.apache.lucene.analysis.en.PorterStemFilterFactory
+shade5.org.apache.lucene.analysis.es.SpanishLightStemFilterFactory
+shade5.org.apache.lucene.analysis.fa.PersianNormalizationFilterFactory
+shade5.org.apache.lucene.analysis.fi.FinnishLightStemFilterFactory
+shade5.org.apache.lucene.analysis.fr.FrenchLightStemFilterFactory
+shade5.org.apache.lucene.analysis.fr.FrenchMinimalStemFilterFactory
+shade5.org.apache.lucene.analysis.ga.IrishLowerCaseFilterFactory
+shade5.org.apache.lucene.analysis.gl.GalicianMinimalStemFilterFactory
+shade5.org.apache.lucene.analysis.gl.GalicianStemFilterFactory
+shade5.org.apache.lucene.analysis.hi.HindiNormalizationFilterFactory
+shade5.org.apache.lucene.analysis.hi.HindiStemFilterFactory
+shade5.org.apache.lucene.analysis.hu.HungarianLightStemFilterFactory
+shade5.org.apache.lucene.analysis.hunspell.HunspellStemFilterFactory
+shade5.org.apache.lucene.analysis.id.IndonesianStemFilterFactory
+shade5.org.apache.lucene.analysis.in.IndicNormalizationFilterFactory
+shade5.org.apache.lucene.analysis.it.ItalianLightStemFilterFactory
+shade5.org.apache.lucene.analysis.lv.LatvianStemFilterFactory
+shade5.org.apache.lucene.analysis.minhash.MinHashFilterFactory
+shade5.org.apache.lucene.analysis.miscellaneous.ASCIIFoldingFilterFactory
+shade5.org.apache.lucene.analysis.miscellaneous.CapitalizationFilterFactory
+shade5.org.apache.lucene.analysis.miscellaneous.CodepointCountFilterFactory
+shade5.org.apache.lucene.analysis.miscellaneous.DateRecognizerFilterFactory
+shade5.org.apache.lucene.analysis.miscellaneous.FingerprintFilterFactory
+shade5.org.apache.lucene.analysis.miscellaneous.HyphenatedWordsFilterFactory
+shade5.org.apache.lucene.analysis.miscellaneous.KeepWordFilterFactory
+shade5.org.apache.lucene.analysis.miscellaneous.KeywordMarkerFilterFactory
+shade5.org.apache.lucene.analysis.miscellaneous.KeywordRepeatFilterFactory
+shade5.org.apache.lucene.analysis.miscellaneous.LengthFilterFactory
+shade5.org.apache.lucene.analysis.miscellaneous.LimitTokenCountFilterFactory
+shade5.org.apache.lucene.analysis.miscellaneous.LimitTokenOffsetFilterFactory
+shade5.org.apache.lucene.analysis.miscellaneous.LimitTokenPositionFilterFactory
+shade5.org.apache.lucene.analysis.miscellaneous.RemoveDuplicatesTokenFilterFactory
+shade5.org.apache.lucene.analysis.miscellaneous.StemmerOverrideFilterFactory
+shade5.org.apache.lucene.analysis.miscellaneous.TrimFilterFactory
+shade5.org.apache.lucene.analysis.miscellaneous.TruncateTokenFilterFactory
+shade5.org.apache.lucene.analysis.miscellaneous.WordDelimiterFilterFactory
+shade5.org.apache.lucene.analysis.miscellaneous.WordDelimiterGraphFilterFactory
+shade5.org.apache.lucene.analysis.miscellaneous.ScandinavianFoldingFilterFactory
+shade5.org.apache.lucene.analysis.miscellaneous.ScandinavianNormalizationFilterFactory
+shade5.org.apache.lucene.analysis.ngram.EdgeNGramFilterFactory
+shade5.org.apache.lucene.analysis.ngram.NGramFilterFactory
+shade5.org.apache.lucene.analysis.no.NorwegianLightStemFilterFactory
+shade5.org.apache.lucene.analysis.no.NorwegianMinimalStemFilterFactory
+shade5.org.apache.lucene.analysis.pattern.PatternReplaceFilterFactory
+shade5.org.apache.lucene.analysis.pattern.PatternCaptureGroupFilterFactory
+shade5.org.apache.lucene.analysis.payloads.DelimitedPayloadTokenFilterFactory
+shade5.org.apache.lucene.analysis.payloads.NumericPayloadTokenFilterFactory
+shade5.org.apache.lucene.analysis.payloads.TokenOffsetPayloadTokenFilterFactory
+shade5.org.apache.lucene.analysis.payloads.TypeAsPayloadTokenFilterFactory
+shade5.org.apache.lucene.analysis.pt.PortugueseLightStemFilterFactory
+shade5.org.apache.lucene.analysis.pt.PortugueseMinimalStemFilterFactory
+shade5.org.apache.lucene.analysis.pt.PortugueseStemFilterFactory
+shade5.org.apache.lucene.analysis.reverse.ReverseStringFilterFactory
+shade5.org.apache.lucene.analysis.ru.RussianLightStemFilterFactory
+shade5.org.apache.lucene.analysis.shingle.ShingleFilterFactory
+shade5.org.apache.lucene.analysis.snowball.SnowballPorterFilterFactory
+shade5.org.apache.lucene.analysis.sr.SerbianNormalizationFilterFactory
+shade5.org.apache.lucene.analysis.standard.ClassicFilterFactory
+shade5.org.apache.lucene.analysis.standard.StandardFilterFactory
+shade5.org.apache.lucene.analysis.sv.SwedishLightStemFilterFactory
+shade5.org.apache.lucene.analysis.synonym.SynonymFilterFactory
+shade5.org.apache.lucene.analysis.synonym.SynonymGraphFilterFactory
+shade5.org.apache.lucene.analysis.core.FlattenGraphFilterFactory
+shade5.org.apache.lucene.analysis.tr.TurkishLowerCaseFilterFactory
+shade5.org.apache.lucene.analysis.util.ElisionFilterFactory
